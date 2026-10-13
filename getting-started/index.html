@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Getting started with Catalogist</title>
-<meta name="description" content="Set up Catalogist step by step: departments, course import, programs, program maps, pathways and the Programs page.">
+<title>Getting started with Vessera</title>
+<meta name="description" content="Set up Vessera step by step: departments, course import, programs, program maps, pathways and the Programs page.">
 <link rel="icon" href="../assets/icon-128x128.png">
-<link rel="canonical" href="https://russtino.github.io/Catalogist/getting-started/">
+<link rel="canonical" href="https://russtino.github.io/Vessera/getting-started/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
@@ -80,15 +80,15 @@
 
 <div class="top">
   <header class="wrap site-header">
-    <a class="brand" href="../"><img src="../assets/icon-128x128.png" alt="" width="40" height="40">Catalogist</a>
+    <a class="brand" href="../"><img src="../assets/icon-128x128.png" alt="" width="40" height="40">Vessera</a>
     <nav class="site-nav" aria-label="Main">
       <a href="../#features">Features</a>
       <a href="./" aria-current="page">Getting started</a>
-      <a href="https://github.com/russtino/Catalogist">Source code</a>
+      <a href="https://github.com/russtino/Vessera">Source code</a>
     </nav>
   </header>
   <div class="wrap page-title">
-    <h1>Getting started with Catalogist</h1>
+    <h1>Getting started with Vessera</h1>
     <p>From a fresh install to published program pages and a searchable Programs page, one step at a time.</p>
   </div>
 </div>
@@ -100,38 +100,38 @@
   </nav>
   <main class="guide" id="guide">
 <h2 id="before">Before you start</h2>
-<p>Catalogist turns WordPress into your college's program and course catalog. You enter each course and program once, and every page that shows them stays in sync: change a course's credits, and every program map that includes it updates.</p>
+<p>Vessera turns WordPress into your college's program and course catalog. You enter each course and program once, and every page that shows them stays in sync: change a course's credits, and every program map that includes it updates.</p>
 <p>This guide takes you from a fresh install to a finished program page and a searchable list of programs. Steps marked optional can be skipped and done later. The screenshots use Harmon Ridge Technical College, a fictional college whose <a href="../downloads/harmon-ridge-catalog.xlsx">sample catalog</a> you can download and import to follow along.</p>
 <p><strong>You'll need</strong></p>
 <ul>
-<li>WordPress 6.6 or newer, with Catalogist installed and activated: go to <strong>Plugins → Add New</strong>, search for <strong>Catalogist</strong>, then click <strong>Install Now</strong> and <strong>Activate</strong>. It's also listed on <a href="https://wordpress.org/plugins/catalogist/">WordPress.org</a>.</li>
+<li>WordPress 6.6 or newer, with Vessera installed and activated: go to <strong>Plugins → Add New</strong>, search for <strong>Vessera</strong>, then click <strong>Install Now</strong> and <strong>Activate</strong>. It's also listed on <a href="https://wordpress.org/plugins/vessera/">WordPress.org</a>.</li>
 <li>An account with the Administrator or Editor role (importing courses requires one of these)</li>
 <li>Your course list as a spreadsheet (CSV or Excel), if you'd like to import rather than type courses in</li>
 </ul>
-<p><strong>What Catalogist adds</strong></p>
-<p>Everything lives under the <strong>Catalogist</strong> menu in your dashboard: Programs, Courses, Credential Types, Departments, Career Areas, Delivery Modes, Map Templates, Import Courses and Settings. It also adds a <strong>Catalogist</strong> category of blocks for building program, course and catalog pages.</p>
+<p><strong>What Vessera adds</strong></p>
+<p>Everything lives under the <strong>Vessera</strong> menu in your dashboard: Programs, Courses, Credential Types, Departments, Career Areas, Delivery Modes, Map Templates, Import Courses and Settings. It also adds a <strong>Vessera</strong> category of blocks for building program, course and catalog pages.</p>
 <h2 id="departments">Step 1: Departments and course prefixes</h2>
 <p>Departments group your programs and courses. Each department can also claim <strong>course prefixes</strong>, the letters a course code starts with, so courses are filed automatically. For example, if Computer Information Systems claims CIS and NET, every course whose code starts with CIS or NET lands in that department.</p>
 <ol>
-<li>Go to <strong>Catalogist → Departments</strong>.</li>
+<li>Go to <strong>Vessera → Departments</strong>.</li>
 <li>Enter a department name, such as Computer Information Systems.</li>
 <li>In <strong>Course prefixes</strong>, enter the prefixes that belong to it, separated by commas: <code>CIS, NET</code>.</li>
 <li>Click <strong>Add New Department</strong>, and repeat for each department. A General Education department for shared courses (English, math, sciences) is often useful.</li>
 </ol>
 <p>Each prefix belongs to one department. Giving a prefix to a second department moves it there.</p>
-<figure><a href="../assets/guide/step-1-departments.png"><img src="../assets/guide/step-1-departments.png" alt="The Departments screen: the Course prefixes field on the left, and each department's prefixes in the list." width="1600" height="806" loading="lazy"></a><figcaption>The Departments screen: the Course prefixes field on the left, and each department's prefixes in the list.</figcaption></figure>
+<figure><a href="../assets/guide/step-1-departments.png"><img src="../assets/guide/step-1-departments.png" alt="The Departments screen: the Course prefixes field on the left, and each department's prefixes in the list." width="1900" height="832" loading="lazy"></a><figcaption>The Departments screen: the Course prefixes field on the left, and each department's prefixes in the list.</figcaption></figure>
 
 <p><strong>Tip:</strong> You can skip this step and set prefixes during the import instead (see step 2). Your choices there are saved to the departments the same way.</p>
 <h2 id="import">Step 2: Import your courses</h2>
 <p>If your courses are in a spreadsheet, import them all at once instead of entering them one by one. Your file can be CSV or Excel (.xlsx), with one course per row.</p>
 <p><strong>Choose the file</strong></p>
 <ol>
-<li>Go to <strong>Catalogist → Import Courses</strong> and choose your file. It's read in your browser, and nothing is saved until you confirm the import.</li>
+<li>Go to <strong>Vessera → Import Courses</strong> and choose your file. It's read in your browser, and nothing is saved until you confirm the import.</li>
 <li>If your workbook has several sheets, choose the one with your courses under <strong>Sheet</strong>.</li>
 </ol>
 <p><strong>Match columns to course fields</strong></p>
 <ol>
-<li>Check the <strong>Header row</strong>: the row with your column names. Catalogist finds it automatically, skipping titles or dates above it. If it guessed wrong, choose the right row.</li>
+<li>Check the <strong>Header row</strong>: the row with your column names. Vessera finds it automatically, skipping titles or dates above it. If it guessed wrong, choose the right row.</li>
 <li>For each course field, choose the spreadsheet column it comes from. Columns are labeled with their letter, as in a spreadsheet ("C: Course Title"), and common names like "Cr Hrs" or "Prereqs" are matched for you. The <strong>First course row</strong> column shows a value from your file so you can check each match.<ul>
 <li><strong>Course code</strong> and <strong>Title</strong> are required.</li>
 <li>If your codes are split across two columns, like "CIS" and "220", match the letters to <strong>Subject prefix</strong>.</li>
@@ -141,7 +141,7 @@
 <li>Under <strong>Departments by course prefix</strong>, choose a department for each prefix in your file, or add a new department. These choices are remembered.</li>
 <li>Choose whether <strong>new courses</strong> are saved as drafts for review or published immediately, and whether <strong>courses that already exist</strong> (same course code) are updated or left unchanged.</li>
 </ol>
-<figure><a href="../assets/screenshot-6.png"><img src="../assets/screenshot-6.png" alt="Matching columns to course fields, with a department chosen for each course prefix." width="1600" height="1956" loading="lazy"></a><figcaption>Matching columns to course fields, with a department chosen for each course prefix.</figcaption></figure>
+<figure><a href="../assets/screenshot-6.png"><img src="../assets/screenshot-6.png" alt="Matching columns to course fields, with a department chosen for each course prefix." width="1600" height="2000" loading="lazy"></a><figcaption>Matching columns to course fields, with a department chosen for each course prefix.</figcaption></figure>
 
 <p><strong>Preview and import</strong></p>
 <ol>
@@ -149,16 +149,16 @@
 <li>If a course code appears on more than one row, choose which row to import, or none of them. The import can't start until each duplicate is decided.</li>
 <li>Click the <strong>Import</strong> button and keep the page open until it finishes.</li>
 </ol>
-<figure><a href="../assets/guide/step-2-preview.png"><img src="../assets/guide/step-2-preview.png" alt="The preview: counts for each action, a duplicate course code to decide, and every row with its department and prerequisites." width="1600" height="1160" loading="lazy"></a><figcaption>The preview: counts for each action, a duplicate course code to decide, and every row with its department and prerequisites.</figcaption></figure>
+<figure><a href="../assets/guide/step-2-preview.png"><img src="../assets/guide/step-2-preview.png" alt="The preview: counts for each action, a duplicate course code to decide, and every row with its department and prerequisites." width="1600" height="1159" loading="lazy"></a><figcaption>The preview: counts for each action, a duplicate course code to decide, and every row with its department and prerequisites.</figcaption></figure>
 
 <p>The summary lists what was created, updated and skipped. Prerequisite codes that didn't match any course are listed too and kept in the course's notes, so nothing is lost; import the missing courses and run the import again to link them.</p>
-<figure><a href="../assets/guide/step-2-complete.png"><img src="../assets/guide/step-2-complete.png" alt="The import summary, with two prerequisites that didn't match a course and one row that wasn't imported." width="1600" height="728" loading="lazy"></a><figcaption>The import summary, with two prerequisites that didn't match a course and one row that wasn't imported.</figcaption></figure>
+<figure><a href="../assets/guide/step-2-complete.png"><img src="../assets/guide/step-2-complete.png" alt="The import summary, with two prerequisites that didn't match a course and one row that wasn't imported." width="1600" height="734" loading="lazy"></a><figcaption>The import summary, with two prerequisites that didn't match a course and one row that wasn't imported.</figcaption></figure>
 
 <p><strong>Tip:</strong> Re-importing an updated spreadsheet later updates your existing courses rather than duplicating them.</p>
 <h2 id="courses">Step 3: Review and publish courses</h2>
 <p>If you imported courses as drafts, review them before publishing. <strong>Draft courses never appear on your public site</strong>, including in program maps, so publish them once they look right.</p>
 <p><strong>Find courses</strong></p>
-<p>Go to <strong>Catalogist → Courses</strong>. The list shows each course's code, credits, department and the programs that use it. Use the filters above the list to narrow it:</p>
+<p>Go to <strong>Vessera → Courses</strong>. The list shows each course's code, credits, department and the programs that use it. Use the filters above the list to narrow it:</p>
 <ul>
 <li><strong>All departments</strong>: one department's courses</li>
 <li><strong>All programs</strong>: courses in a program's map, or <strong>Not in any program</strong> for courses no map uses yet</li>
@@ -177,11 +177,11 @@
 <figure><a href="../assets/guide/step-3-course-page.png"><img src="../assets/guide/step-3-course-page.png" alt="A course page: Course Info with hours and a linked prerequisite, followed by the description." width="1200" height="703" loading="lazy"></a><figcaption>A course page: Course Info with hours and a linked prerequisite, followed by the description.</figcaption></figure>
 
 <p><strong>Adding a course by hand</strong></p>
-<p>Go to <strong>Catalogist → Courses → Add New Course</strong>, enter the title and fill in Course Details. If its code starts with a prefix a department claims, it's filed in that department automatically.</p>
+<p>Go to <strong>Vessera → Courses → Add New Course</strong>, enter the title and fill in Course Details. If its code starts with a prefix a department claims, it's filed in that department automatically.</p>
 <h2 id="template">Step 4 (optional): Build a general education template</h2>
 <p>Most associate degrees share the same general education requirements. Build them once as a <strong>map template</strong>, then apply the template to each program's map instead of re-entering them.</p>
 <ol>
-<li>Go to <strong>Catalogist → Map Templates → Add New Map Template</strong>, and give it a name such as "AAS General Education".</li>
+<li>Go to <strong>Vessera → Map Templates → Add New Map Template</strong>, and give it a name such as "AAS General Education".</li>
 <li>In the <strong>Template map</strong> box, click <strong>Create map</strong>. The map editor opens; it works exactly as described in step 6.</li>
 <li>Add terms and place the general education courses and choice slots in the semesters they're usually taken.</li>
 <li>Click <strong>Done</strong>, then <strong>Publish</strong>. Publishing is what saves the template.</li>
@@ -191,7 +191,7 @@
 <p>You'll apply the template in step 6. Applying it copies its entries into a program's map, so each program can then be adjusted on its own. Changing the template later doesn't change maps it was already applied to.</p>
 <h2 id="program">Step 5: Create a program</h2>
 <ol>
-<li>Go to <strong>Catalogist → Add New Program</strong> and enter the program's name as the title.</li>
+<li>Go to <strong>Vessera → Add New Program</strong> and enter the program's name as the title.</li>
 <li>Type an overview in the first paragraph. New programs start with a ready-made layout below it (see step 8).</li>
 <li>In the editor sidebar, open the <strong>Program</strong> tab and tick the program's <strong>Departments</strong>, <strong>Career Areas</strong> and <strong>Delivery Modes</strong>. These power the filters in the Program Finder.</li>
 </ol>
@@ -280,8 +280,8 @@
 </ul>
 <p>For more room, set the block's alignment to <strong>Wide</strong> or <strong>Full width</strong> in its toolbar.</p>
 <p><strong>Adding blocks to other pages or older programs</strong></p>
-<p>All Catalogist blocks are in the <strong>Catalogist</strong> category of the block inserter (the <strong>+</strong> button).</p>
-<figure class="narrow"><a href="../assets/guide/step-8-inserter.png"><img src="../assets/guide/step-8-inserter.png" alt="The Catalogist category in the block inserter." width="676" height="760" loading="lazy"></a><figcaption>The Catalogist category in the block inserter.</figcaption></figure>
+<p>All Vessera blocks are in the <strong>Vessera</strong> category of the block inserter (the <strong>+</strong> button).</p>
+<figure class="narrow"><a href="../assets/guide/step-8-inserter.png"><img src="../assets/guide/step-8-inserter.png" alt="The Vessera category in the block inserter." width="688" height="751" loading="lazy"></a><figcaption>The Vessera category in the block inserter.</figcaption></figure>
 
 <p><strong>Tip:</strong> If your theme shows a "Written by" line on program pages, see Troubleshooting.</p>
 <h2 id="programs-page">Step 9: Set up the Programs page</h2>
@@ -289,19 +289,19 @@
 <p><strong>Create the page</strong></p>
 <ol>
 <li>Go to <strong>Pages → Add New Page</strong> and give it a title, such as "Program Offerings".</li>
-<li>Add the <strong>Program Finder</strong> block from the Catalogist category.</li>
+<li>Add the <strong>Program Finder</strong> block from the Vessera category.</li>
 <li>In the page's settings, set its URL slug, such as <code>program-offerings</code>, and publish.</li>
 </ol>
 <p>The finder lists every published program as a card and adds a search box and filters for credential, career area and delivery mode. Each filter appears only once programs use at least two of its options. In the block's settings you can turn the search box, each filter and the program summaries on or off. Setting the block to <strong>Wide</strong> fits three cards per row.</p>
 <figure><a href="../assets/screenshot-3.png"><img src="../assets/screenshot-3.png" alt="The Program Finder, filtered to on-campus technical certificates." width="1600" height="1251" loading="lazy"></a><figcaption>The Program Finder, filtered to on-campus technical certificates.</figcaption></figure>
 
-<p><strong>Tell Catalogist about the page</strong></p>
+<p><strong>Tell Vessera about the page</strong></p>
 <ol>
-<li>Go to <strong>Catalogist → Settings</strong>.</li>
+<li>Go to <strong>Vessera → Settings</strong>.</li>
 <li>Under <strong>Programs page</strong>, choose your page and click <strong>Save Changes</strong>.</li>
 </ol>
 <p>Your page now owns its address, and program pages are nested under it, such as <code>/program-offerings/software-development/</code>. Keep other pages out from under it, since its child pages can't be reached.</p>
-<figure><a href="../assets/guide/step-9-settings.png"><img src="../assets/guide/step-9-settings.png" alt="Catalogist → Settings, with the Programs page chosen and both program addresses shown." width="1900" height="828" loading="lazy"></a><figcaption>Catalogist → Settings, with the Programs page chosen and both program addresses shown.</figcaption></figure>
+<figure><a href="../assets/guide/step-9-settings.png"><img src="../assets/guide/step-9-settings.png" alt="Vessera → Settings, with the Programs page chosen and both program addresses shown." width="2200" height="822" loading="lazy"></a><figcaption>Vessera → Settings, with the Programs page chosen and both program addresses shown.</figcaption></figure>
 
 <p><strong>Tip:</strong> If the address still shows a list titled "Archives: Programs", go to <strong>Settings → Permalinks</strong> and click <strong>Save Changes</strong> once.</p>
 <h2 id="course-catalog">Step 10 (optional): Add a course catalog page</h2>
@@ -323,20 +323,20 @@ Check that every course has its credit hours, that each choice slot has credits 
 <p><strong>My theme shows "Written by" or "Posted… by" with no name on program or course pages.</strong>
 That text comes from your theme's template for posts, which expects an author, categories and tags. In a block theme, go to <strong>Appearance → Editor → Templates</strong>, add templates for "Single item: Program" and "Single item: Course", and remove that section from each.</p>
 <p><strong>My Programs page shows "Archives: Programs" instead of my page.</strong>
-Choose your page under <strong>Catalogist → Settings → Programs page</strong>. If it still doesn't show, go to <strong>Settings → Permalinks</strong> and click <strong>Save Changes</strong>.</p>
-<p><strong>I updated Catalogist and my settings are gone.</strong>
+Choose your page under <strong>Vessera → Settings → Programs page</strong>. If it still doesn't show, go to <strong>Settings → Permalinks</strong> and click <strong>Save Changes</strong>.</p>
+<p><strong>I updated Vessera and my settings are gone.</strong>
 Deleting the plugin removes its settings. To update by hand, upload the new version under <strong>Plugins → Add New → Upload Plugin</strong> and choose <strong>Replace current with uploaded</strong> instead of deleting first. Updates through <strong>Update now</strong> keep your settings.</p>
 <p><strong>Where can I get help?</strong>
-Ask in the <a href="https://wordpress.org/support/plugin/catalogist/">Catalogist support forum</a> on WordPress.org.</p>
-<p><strong>What happens to my content if I delete Catalogist?</strong>
-Only its settings are removed; programs, courses and departments stay in case you reinstall. To delete everything, turn on <strong>Remove content</strong> under <strong>Catalogist → Settings</strong> before deleting the plugin. This can't be undone, so back up first.</p>
+Ask in the <a href="https://wordpress.org/support/plugin/vessera/">Vessera support forum</a> on WordPress.org.</p>
+<p><strong>What happens to my content if I delete Vessera?</strong>
+Only its settings are removed; programs, courses and departments stay in case you reinstall. To delete everything, turn on <strong>Remove content</strong> under <strong>Vessera → Settings</strong> before deleting the plugin. This can't be undone, so back up first.</p>
   </main>
 </div>
 
 <footer>
   <div class="wrap">
-    <span>Catalogist, a WordPress plugin for college catalogs.</span>
-    <span><a href="../">Back to the Catalogist home page</a></span>
+    <span>Vessera, a WordPress plugin for college catalogs.</span>
+    <span><a href="../">Back to the Vessera home page</a></span>
   </div>
 </footer>
 </body>

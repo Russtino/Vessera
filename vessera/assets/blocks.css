@@ -1,0 +1,525 @@
+/* Program Catalog blocks. Colors inherit from the theme. */
+
+.vessera-program-map__terms {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+	gap: 1.5rem;
+	align-items: start;
+}
+
+.vessera-program-map__term {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0;
+}
+
+.vessera-program-map__term caption {
+	text-align: left;
+	font-weight: 700;
+	padding-bottom: 0.5em;
+}
+
+.vessera-program-map__term th,
+.vessera-program-map__term td {
+	padding: 0.4em 0.4em;
+	text-align: left;
+	vertical-align: top;
+	border: 0;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.35);
+}
+
+.vessera-program-map__term thead th {
+	font-size: 0.85em;
+}
+
+.vessera-program-map__term tfoot th,
+.vessera-program-map__term tfoot td {
+	font-weight: 700;
+	border-bottom: 0;
+}
+
+.vessera-program-map__code {
+	white-space: nowrap;
+}
+
+.vessera-program-map__term .vessera-num {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.vessera-program-map__total {
+	font-weight: 700;
+	margin-top: 1rem;
+}
+
+.vessera-details {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	gap: 0.4em 1.5em;
+	margin: 0;
+}
+
+.vessera-details > div {
+	display: contents;
+}
+
+.vessera-details dt {
+	font-weight: 700;
+}
+
+.vessera-details dd {
+	margin: 0;
+}
+
+.vessera-details__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.vessera-details__list li + li {
+	margin-top: 0.25em;
+}
+
+.vessera-details__note {
+	margin: 0;
+}
+
+.vessera-details__list + .vessera-details__note {
+	margin-top: 0.4em;
+}
+
+
+.vessera-program-map__credential + .vessera-program-map__credential {
+	margin-top: 2.5rem;
+}
+
+.vessera-program-map__heading {
+	margin-bottom: 1rem;
+}
+
+/* Tabs (multiple credentials) */
+.vessera-program-map__tabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem;
+	margin-bottom: 1.5rem;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.35);
+}
+
+.vessera-program-map__tabs[hidden] {
+	display: none;
+}
+
+.vessera-program-map__tab {
+	appearance: none;
+	margin: 0 0 -1px;
+	padding: 0.6em 1em;
+	border: 0;
+	border-bottom: 3px solid transparent;
+	background: none;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+}
+
+.vessera-program-map__tab:hover {
+	border-bottom-color: rgba(128, 128, 128, 0.5);
+}
+
+.vessera-program-map__tab[aria-selected="true"] {
+	border-bottom-color: currentColor;
+	font-weight: 700;
+}
+
+.vessera-program-map__tab:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+.is-tabbed .vessera-program-map__credential + .vessera-program-map__credential {
+	margin-top: 0;
+}
+
+.is-tabbed .vessera-program-map__credential:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 4px;
+}
+
+/* Print every credential, not just the open tab. */
+@media print {
+	.vessera-program-map__tabs {
+		display: none;
+	}
+
+	.vessera-program-map__credential[hidden],
+	.vessera-program-map__heading[hidden] {
+		display: block;
+	}
+
+	.is-tabbed .vessera-program-map__credential + .vessera-program-map__credential {
+		margin-top: 2.5rem;
+	}
+}
+
+/* Program Finder */
+.vessera-finder__form {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+	gap: 1rem;
+	align-items: end;
+	margin-bottom: 1.5rem;
+}
+
+.vessera-finder__form[hidden] {
+	display: none;
+}
+
+/* Show the form in the editor preview, where the script doesn't run. */
+.editor-styles-wrapper .vessera-finder__form[hidden] {
+	display: grid;
+}
+
+.vessera-finder__field--search {
+	grid-column: 1 / -1;
+}
+
+.vessera-finder__field label {
+	display: block;
+	margin-bottom: 0.3em;
+	font-weight: 600;
+}
+
+.vessera-finder__field input,
+.vessera-finder__field select {
+	box-sizing: border-box;
+	width: 100%;
+	font: inherit;
+}
+
+.vessera-finder__field--reset {
+	align-self: end;
+}
+
+.vessera-finder__reset {
+	font: inherit;
+	cursor: pointer;
+}
+
+.vessera-finder__status {
+	margin: 0 0 1rem;
+	font-size: 0.9em;
+}
+
+/* The card grid is for the Program Finder's list only; the Course Finder's table must span the full width. */
+ul.vessera-finder__results {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+	gap: 1.5rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.vessera-finder__item[hidden],
+.vessera-finder__results[hidden],
+.vessera-finder__empty[hidden] {
+	display: none;
+}
+
+.vessera-finder__card {
+	box-sizing: border-box;
+	height: 100%;
+	padding: 1.25rem;
+	border: 1px solid rgba(128, 128, 128, 0.35);
+	border-radius: 4px;
+}
+
+.vessera-finder__title {
+	margin: 0 0 0.5rem;
+	font-size: 1.2em;
+}
+
+.vessera-finder__credentials {
+	margin: 0 0 0.75rem;
+	padding: 0;
+	list-style: none;
+	font-size: 0.9em;
+	font-weight: 600;
+}
+
+.vessera-finder__excerpt {
+	margin: 0;
+}
+
+.vessera-finder__empty {
+	padding: 1.5rem 0;
+}
+
+/* Course Finder */
+.vessera-course-finder__scroll {
+	display: block;
+	width: 100%;
+	overflow-x: auto;
+}
+
+.vessera-course-finder__table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0;
+}
+
+.vessera-course-finder__table th,
+.vessera-course-finder__table td {
+	padding: 0.5em 0.6em;
+	text-align: left;
+	vertical-align: top;
+	border: 0;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.35);
+}
+
+.vessera-course-finder__table thead th {
+	font-size: 0.85em;
+}
+
+.vessera-course-finder__table .vessera-num {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.vessera-course-finder__code {
+	white-space: nowrap;
+	font-weight: 600;
+}
+
+/* Credential descriptions */
+.vessera-details__description {
+	display: block;
+	margin-top: 0.15em;
+	font-size: 0.9em;
+	opacity: 0.85;
+}
+
+.vessera-program-map__description {
+	margin: 0 0 1rem;
+}
+
+/* Enrollment notice (Program Details and Program Finder cards) */
+.vessera-notice {
+	margin: 0 0 1rem;
+	padding: 0.75em 1em;
+	border-left: 4px solid currentColor;
+	background: rgba(128, 128, 128, 0.1);
+}
+
+.vessera-notice p {
+	margin: 0;
+}
+
+.vessera-notice p + p {
+	margin-top: 0.5em;
+}
+
+.vessera-finder__notice {
+	margin: 0 0 0.75rem;
+	padding: 0.4em 0.7em;
+	border-left: 3px solid currentColor;
+	background: rgba(128, 128, 128, 0.1);
+	font-size: 0.9em;
+}
+
+/* Program List (outcomes, careers, certifications) */
+.vessera-program-list__label {
+	margin: 1em 0 0.25em;
+	font-weight: 700;
+}
+
+.vessera-program-list__items li + li {
+	margin-top: 0.3em;
+}
+
+/* Choice slots in program maps */
+.vessera-program-map__choice-label {
+	font-style: italic;
+}
+
+.vessera-program-map__choose {
+	display: block;
+	margin-top: 0.2em;
+	font-size: 0.9em;
+}
+
+.vessera-program-map__options {
+	margin: 0.15em 0 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0.9em;
+}
+
+.vessera-program-map__options li {
+	margin: 0;
+	padding: 0.1em 0;
+}
+
+/* Pathways */
+.vessera-pathways {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem;
+	margin: 0 0 1.25rem;
+}
+
+.vessera-pathways[hidden] {
+	display: none;
+}
+
+.vessera-pathways__label {
+	font-weight: 700;
+}
+
+.vessera-pathways__buttons {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.25rem;
+}
+
+.vessera-pathways__button {
+	appearance: none;
+	margin: 0;
+	padding: 0.35em 0.9em;
+	border: 1px solid currentColor;
+	border-radius: 999px;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+}
+
+.vessera-pathways__button[aria-pressed="true"] {
+	background: rgba(128, 128, 128, 0.2);
+	font-weight: 700;
+	box-shadow: inset 0 0 0 1px currentColor;
+}
+
+.vessera-pathways__button:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+.vessera-pathways__description {
+	flex-basis: 100%;
+	margin: 0.25rem 0 0;
+	font-size: 0.95em;
+}
+
+.vessera-program-map__pathway-heading th {
+	padding-top: 0.8em;
+	font-style: italic;
+	font-weight: 700;
+	border-bottom-width: 0;
+}
+
+.vessera-program-map__term tbody[hidden] {
+	display: none;
+}
+
+@media print {
+	.vessera-pathways {
+		display: none;
+	}
+
+	.vessera-program-map__term tbody[hidden] {
+		display: table-row-group;
+	}
+}
+
+.vessera-details__pathways {
+	margin: 0.3em 0 0;
+	padding: 0 0 0 1em;
+	list-style: none;
+	font-size: 0.9em;
+}
+
+/* Fixed column widths, so Code / Title / Credits line up across every term's table. */
+.vessera-program-map__term {
+	table-layout: fixed;
+}
+
+/* Code and Credits stay compact so Title gets most of each column. */
+.vessera-program-map__term thead th:first-child {
+	width: 6em;
+}
+
+.vessera-program-map__term thead th:last-child {
+	width: 4.5em;
+}
+
+.vessera-program-map__term td,
+.vessera-program-map__term th {
+	overflow-wrap: anywhere;
+}
+
+.vessera-program-map__code {
+	white-space: normal;
+}
+
+.vessera-course-finder__table {
+	table-layout: fixed;
+}
+
+.vessera-course-finder__table thead th:first-child {
+	width: 7.5em;
+}
+
+.vessera-course-finder__table thead th:nth-child(3) {
+	width: 5em;
+}
+
+
+/* Course groups: each group's courses stacked, groups set apart by space. */
+.vessera-program-map__group {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.vessera-program-map__group li {
+	margin: 0;
+	padding: 0.05em 0;
+}
+
+.vessera-program-map__options.has-groups > li + li {
+	margin-top: 0.75em;
+}
+
+/* Semesters per row (Program Map setting). Narrow screens always stack. */
+.vessera-program-map__terms[data-columns="1"] {
+	grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 700px) {
+	.vessera-program-map__terms[data-columns="2"],
+	.vessera-program-map__terms[data-columns="3"],
+	.vessera-program-map__terms[data-columns="4"] {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 1000px) {
+	.vessera-program-map__terms[data-columns="3"] {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 1200px) {
+	.vessera-program-map__terms[data-columns="4"] {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 699px) {
+	.vessera-program-map__terms[data-columns] {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}

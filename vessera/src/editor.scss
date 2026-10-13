@@ -1,0 +1,287 @@
+/* Sidebar fields */
+.vessera-credential + .vessera-credential {
+	border-top: 1px solid #e0e0e0;
+	padding-top: 16px;
+}
+
+.vessera-credential__title {
+	margin: 0 0 12px;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.vessera-field-hint {
+	margin: 0;
+	color: #757575;
+}
+
+.vessera-map-summary {
+	margin: 0;
+}
+
+.vessera-map-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px;
+}
+
+.vessera-map-toolbar__total {
+	flex: 1;
+	font-weight: 600;
+}
+
+.vessera-map-hint,
+.vessera-map-empty {
+	color: #757575;
+	font-style: italic;
+}
+
+.vessera-map-issues {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-bottom: 16px;
+
+	.components-notice {
+		margin: 0;
+	}
+}
+
+.vessera-map-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 16px;
+	align-items: start;
+}
+
+.vessera-map-term {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 12px;
+	background: #fff;
+}
+
+.vessera-map-term__header {
+	display: flex;
+	align-items: flex-end;
+	gap: 2px;
+
+	.components-base-control {
+		flex: 1;
+		margin-right: 4px;
+	}
+}
+
+.vessera-map-term__courses {
+	list-style: none;
+	margin: 12px 0;
+	padding: 0;
+}
+
+.vessera-map-course {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 0 8px;
+	padding: 6px 0;
+	border-top: 1px solid #f0f0f0;
+}
+
+.vessera-map-course__code {
+	font-weight: 600;
+	margin-right: 6px;
+}
+
+.vessera-map-course__credits {
+	color: #757575;
+	white-space: nowrap;
+}
+
+.vessera-map-course__actions {
+	grid-column: 1 / -1;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.vessera-map-course--missing .vessera-map-course__name {
+	color: #cc1818;
+}
+
+.vessera-map-term__total {
+	margin: 8px 0 0;
+	font-weight: 600;
+	text-align: right;
+}
+
+.vessera-hours summary {
+	cursor: pointer;
+	margin-bottom: 8px;
+	font-weight: 500;
+}
+
+/* Choice slots */
+.vessera-map-course--choice {
+	background: #f6f7f7;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+.vessera-map-course__badge {
+	display: inline-block;
+	margin-right: 6px;
+	padding: 0 6px;
+	border-radius: 2px;
+	background: #dcdcde;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.vessera-map-course__options {
+	display: block;
+	color: #50575e;
+	font-size: 12px;
+}
+
+.vessera-map-choice-editor {
+	grid-column: 1 / -1;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin: 8px 0 4px;
+	padding: 12px;
+	border: 1px solid #dcdcde;
+	background: #fff;
+}
+
+.vessera-map-term__add-choice {
+	margin-top: 8px;
+}
+
+.vessera-map-toolbar__template {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+/* Pathways */
+.vessera-pathways-editor summary {
+	cursor: pointer;
+	margin-bottom: 8px;
+	font-weight: 500;
+}
+
+.vessera-pathways-editor__item {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 8px 0;
+	border-top: 1px solid #f0f0f0;
+}
+
+.vessera-map-term__group + .vessera-map-term__group {
+	margin-top: 12px;
+}
+
+.vessera-map-term__group-heading {
+	margin: 12px 0 4px;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+	color: #50575e;
+}
+
+.vessera-map-course__pathway {
+	grid-column: 1 / -1;
+	max-width: 220px;
+	margin-top: 4px;
+}
+
+.vessera-map-toolbar__note {
+	color: #50575e;
+	font-style: italic;
+}
+
+.vessera-map-choice-editor__heading {
+	margin: 0;
+	font-weight: 600;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+.vessera-map-choice-editor__groups {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.vessera-map-choice-editor__group {
+	// The course box spans the full width so course names aren't cut short;
+	// the remove button sits at the right end of the "Group N" label row.
+	position: relative;
+
+	.components-form-token-field,
+	.components-form-token-field__input-container {
+		width: 100%;
+	}
+
+	> .components-button {
+		position: absolute;
+		top: -6px;
+		right: 0;
+	}
+}
+
+.vessera-map-removal-list {
+	columns: 2 240px;
+	margin: 4px 0 0 1.2em;
+	list-style: disc;
+}
+
+// Course names in the choice editor wrap instead of being cut off with "…".
+.vessera-map-choice-editor {
+	.components-form-token-field__token {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.components-form-token-field__token-text {
+		white-space: normal;
+		overflow: visible;
+		text-overflow: clip;
+		height: auto;
+		line-height: 1.35;
+		padding-top: 3px;
+		padding-bottom: 3px;
+	}
+
+	.components-form-token-field__remove-token {
+		align-self: stretch;
+		height: auto;
+	}
+}
+
+.vessera-map-toolbar__columns .components-base-control__label {
+	margin-bottom: 0;
+	white-space: nowrap;
+}
+
+// Credential checkboxes at the top of the Credentials panel.
+.vessera-credential-choices {
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+	.components-checkbox-control {
+		margin-bottom: 8px;
+	}
+}
+
+.vessera-credential-choices__legend {
+	margin-bottom: 8px;
+	padding: 0;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 1.4;
+	text-transform: uppercase;
+}

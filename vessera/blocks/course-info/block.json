@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "vessera/course-info",
+	"version": "1.0.0",
+	"title": "Course Info",
+	"category": "vessera",
+	"icon": "book-alt",
+	"description": "Shows a course's code, credit hours, and prerequisites.",
+	"keywords": [ "prerequisites", "credits", "course code" ],
+	"textdomain": "vessera",
+	"usesContext": [ "postId", "postType" ],
+	"attributes": {
+		"linkPrerequisites": { "type": "boolean", "default": true }
+	},
+	"supports": {
+		"html": false,
+		"spacing": { "margin": true, "padding": true },
+		"typography": { "fontSize": true }
+	},
+	"editorScript": "vessera-blocks",
+	"style": "vessera-blocks",
+	"render": "file:./render.php"
+}

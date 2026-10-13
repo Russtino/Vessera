@@ -1,13 +1,15 @@
 <p align="center"><img src="assets/icon-128x128.png" alt="" width="96" height="96"></p>
 
-# Catalogist
+# Vessera
 
 A free WordPress plugin that turns a college website into a program and course catalog. Built for community and technical colleges.
 
-**[Get it on WordPress.org](https://wordpress.org/plugins/catalogist/)** ·
-**[Website](https://russtino.github.io/Catalogist/)** ·
-**[Getting-started guide](https://russtino.github.io/Catalogist/getting-started/)** ·
-**[Support forum](https://wordpress.org/support/plugin/catalogist/)**
+Vessera was previously published as **Catalogist**. Content made with Catalogist is converted automatically when you activate Vessera.
+
+**[Get it on WordPress.org](https://wordpress.org/plugins/vessera/)** ·
+**[Website](https://russtino.github.io/Vessera/)** ·
+**[Getting-started guide](https://russtino.github.io/Vessera/getting-started/)** ·
+**[Support forum](https://wordpress.org/support/plugin/vessera/)**
 
 ![A program page with credential details and a semester-by-semester map](assets/screenshot-1.png)
 
@@ -31,19 +33,19 @@ Everything is entered once and stays in sync: change a course's credits, and eve
 
 ## Installing
 
-In WordPress, go to **Plugins → Add New**, search for **Catalogist**, then click **Install Now** and **Activate**. Then follow the [getting-started guide](https://russtino.github.io/Catalogist/getting-started/). Updates arrive through WordPress's normal **Update now** link.
+In WordPress, go to **Plugins → Add New**, search for **Vessera**, then click **Install Now** and **Activate**. Then follow the [getting-started guide](https://russtino.github.io/Vessera/getting-started/). Updates arrive through WordPress's normal **Update now** link.
 
 To try it with sample data, import the [Harmon Ridge sample catalog](downloads/harmon-ridge-catalog.xlsx), a fictional college's courses, programs and maps.
 
 ## Questions and problems
 
-- **Questions about using Catalogist:** the [support forum](https://wordpress.org/support/plugin/catalogist/) on WordPress.org.
-- **Bugs and feature ideas:** [open an issue](https://github.com/russtino/Catalogist/issues) with your WordPress version, your theme, and the steps that lead to the problem.
+- **Questions about using Vessera:** the [support forum](https://wordpress.org/support/plugin/vessera/) on WordPress.org.
+- **Bugs and feature ideas:** [open an issue](https://github.com/russtino/Vessera/issues) with your WordPress version, your theme, and the steps that lead to the problem.
 
 ## Repository layout
 
 ```
-catalogist/           The plugin (the same code as on WordPress.org)
+vessera/           The plugin (the same code as on WordPress.org)
 index.html            The project website (GitHub Pages)
 getting-started/      The getting-started guide
 assets/               Website images: icon, banner and screenshots
@@ -52,7 +54,7 @@ downloads/            The sample catalog spreadsheet
 
 ## Development
 
-The plugin's PHP needs no build step. The editor and import screens are built with [`@wordpress/scripts`](https://www.npmjs.com/package/@wordpress/scripts), so changing anything in `catalogist/src/` requires Node.js. From the `catalogist` folder:
+The plugin's PHP needs no build step. The editor and import screens are built with [`@wordpress/scripts`](https://www.npmjs.com/package/@wordpress/scripts), so changing anything in `vessera/src/` requires Node.js. From the `vessera` folder:
 
 ```sh
 npm install      # once
@@ -64,7 +66,7 @@ The compiled `build/` folder is committed so the plugin works straight from the 
 
 ### Releasing a new version
 
-1. Bump the version in `catalogist.php` (header and `CATALOGIST_VERSION`), `package.json`, the `blocks/*/block.json` files and the **Stable tag** in `readme.txt`, and add a changelog entry to `readme.txt`.
+1. Bump the version in `vessera.php` (header and `VESSERA_VERSION`), `package.json`, the `blocks/*/block.json` files and the **Stable tag** in `readme.txt`, and add a changelog entry to `readme.txt`.
 2. Run the [Plugin Check](https://wordpress.org/plugins/plugin-check/) plugin on the result.
 3. Copy the plugin into the WordPress.org SVN repository's `trunk`, copy `trunk` to a new folder under `tags` named for the version, and commit.
 
